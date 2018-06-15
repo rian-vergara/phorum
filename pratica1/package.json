@@ -1,0 +1,32 @@
+{
+  "name": "pratica1",
+  "version": "1.0.0",
+  "description": "Projeto 1 oficina de javascript, topico: classList e seletores",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiozf/oficina-javascript.git"
+  },
+  "keywords": [
+    "javascript",
+    "workshop"
+  ],
+  "author": "Caio ZF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiozf/oficina-javascript/issues"
+  },
+  "homepage": "https://github.com/caiozf/oficina-javascript#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-postcss": "^7.0.1",
+    "precss": "^3.1.2"
+  }
+}
