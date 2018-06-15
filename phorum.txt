@@ -1,0 +1,42 @@
+Login{
+	User/Password
+}
+
+
+Cadastro{
+	User/Email/Password
+}
+
+
+Posts{
+	Titulo/Conteudo/Data/Categoria
+}
+
+
+Contado{
+	Email/Titulo/Conteudo
+}
+
+
+Painel ADMINISTRADOR user{
+	Editar/Deletar{
+		User/Email/Senha
+	}
+}
+
+
+Painel ADMINISTRADOR categoria{ *painel apenas para adm
+	Adicionar/Editar/Deletar
+}
+
+
+Painel USUARIO posts{
+	Editar/Deletar
+}
+
+
+Painel USUARIO user{
+	Editar{
+		User/Email/Senha
+	}
+}
