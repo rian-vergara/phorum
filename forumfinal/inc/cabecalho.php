@@ -39,11 +39,9 @@ require_once('inc/conexao.php');
             if (isset($_SESSION['id_user']) == null) {
             $html = '
             <li class="nav-item">
-              <a class="nav-link" href="posts.php">Cadastrar-se</a>
+              <a class="nav-link" href="cadastro.php">Cadastrar-se</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
-            </li>';
+            ';
             echo $html;
             }
             else{
@@ -53,10 +51,17 @@ require_once('inc/conexao.php');
             </li> 
             ';
             echo $html;
+            if ($_SESSION['adm'] == 1) {
+            $html = '
+            <li class="nav-item">
+              <a class="nav-link" href="paineladm_listagem.php">Admin</a>
+            </li> ';
+              }
+              echo $html;
             }
             ?>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
+              <a class="nav-link" href="contato.php">Contato</a>
             </li>
           </ul>
         </div>

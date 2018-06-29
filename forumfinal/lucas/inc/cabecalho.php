@@ -51,6 +51,13 @@ require_once('inc/conexao.php');
             </li> 
             ';
             echo $html;
+            if ($_SESSION['adm'] == 1) {
+            $html = '
+            <li class="nav-item">
+              <a class="nav-link" href="../paineladm_listagem.php">Admin</a>
+            </li> ';
+              }
+              echo $html;
             }
             ?>
             <li class="nav-item">

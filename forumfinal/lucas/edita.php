@@ -10,7 +10,6 @@ $titulo = $_POST['titulo'];
 $conteudo = $_POST['descricao'];
 
 $sql = "UPDATE posts SET id_post='$id_post', id_cat='$id_ct', id_user='$id_user', titulo='$titulo',conteudo='$conteudo', data=NOW() WHERE id_post='$id_post'";
-echo $sql;
 $result = mysqli_query($conexao,$sql);
     if(mysqli_affected_rows($conexao) > 0){
        $_SESSION['msg'] = 'Success';

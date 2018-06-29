@@ -30,6 +30,7 @@
 			$ress=mysqli_num_rows($sql);
 			$dados=mysqli_fetch_array($sql,MYSQLI_ASSOC);
 			if ($ress != 0) {
+				$_SESSION['adm'] = $dados['admin'];
 				$_SESSION['id_user'] = $dados['id_user'];
 				$_SESSION['user']=$_POST['user'];
 				$_SESSION['senha']=$_POST['senha'];
@@ -40,7 +41,13 @@
 	  				<button type="button" class="close" data-dismiss="alert">&times;</button>
 	  				<strong>Usuário logado com sucesso!</strong> Bem vindo '.$user.'!
 				</div>';
-				header("location:index.php");
+				if ($_SESSION['adm'] == 0) {
+					header("location:index.php");
+				}
+				else{
+					header("location:paineladm_listagem.php");
+				}
+
 			} else {
 				$_SESSION['msg'] = 
 				'<br>

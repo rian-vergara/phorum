@@ -1,13 +1,11 @@
 <?php
 require_once('inc/cabecalho.php');
-//$id_cat = '1';
-// $nm_cat = 'Games';
 
 if (isset($_SESSION['id_user'])) {
 
-// $sql = 'SELECT DISTINCT user,categorias.id_cat,categoria FROM posts,usuarios, categorias WHERE posts.id_user=usuarios.id_user AND usuarios.id_user='.$_SESSION['id_user'];
+
 $sql = 'SELECT DISTINCT user,categorias.id_cat,categoria FROM posts,usuarios,categorias WHERE posts.id_user=usuarios.id_user AND posts.id_cat=categorias.id_cat AND usuarios.id_user='.$_SESSION['id_user'];
-echo $sql;
+
 $result = mysqli_query($conexao, $sql);
 $result_array = mysqli_fetch_all($result,MYSQLI_ASSOC);
 

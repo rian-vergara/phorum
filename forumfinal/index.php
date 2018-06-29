@@ -88,6 +88,15 @@
                   <li class="nav-item">
                     <a class="nav-link" id="openModal" href="painel.php">Painel</a>
                   </li>
+                  <?php
+                  if ($_SESSION['adm'] == 1){
+                  $html='
+                  <li class="nav-item">
+                    <a class="nav-link" id="openModal" href="paineladm_listagem.php">Admin</a>
+                  </li>';
+                  echo $html;
+                  }
+                  ?>                  
                   <li class="nav-item">
                     <a class="nav-link" id="openModal" href="contato.php">Contato</a>
                   </li>
